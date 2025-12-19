@@ -1,194 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amrita Multi-Hazard Research & Education | Demo</title>
-    <style>
-        :root {
-            --primary-color: #b71c1c; /* Amrita Maroon */
-            --secondary-color: #f8f9fa;
-            --text-color: #333;
-            --border-color: #eee;
-            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fdfdfd;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrita Multi-Hazard Research & Education | Demo</title>
+  <style>
+    :root {
+      --primary-color: #b71c1c; /* Amrita Maroon */
+      --secondary-color: #f8f9fa;
+      --text-color: #333;
+      --border-color: #eee;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-        header {
-            background-color: #fff;
-            border-bottom: 4px solid var(--primary-color);
-            padding: 20px 5%;
-            text-align: center;
-        }
-        header h1 { margin: 0; color: var(--primary-color); font-size: 1.8rem; }
-        header h2 { margin: 5px 0 0 0; font-size: 1.1rem; font-weight: 400; color: #666; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-        /* KPI Dashboard */
-        .kpi-container {
-            max-width: 1200px;
-            margin: 30px auto 10px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .kpi-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            border-bottom: 4px solid var(--primary-color);
-        }
-        .kpi-value { display: block; font-size: 2.5rem; font-weight: 800; color: var(--primary-color); }
-        .kpi-label { display: block; font-size: 0.9rem; text-transform: uppercase; color: #777; margin-top: 5px; }
+    header {
+      background-color: #fff;
+      border-bottom: 4px solid var(--primary-color);
+      padding: 20px 5%;
+      text-align: center;
+    }
+    header h1 { margin: 0; color: var(--primary-color); font-size: 1.8rem; }
+    header h2 { margin: 5px 0 0 0; font-size: 1.1rem; font-weight: 400; color: #666; }
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
+    /* KPI Dashboard */
+    .kpi-container {
+      max-width: 1200px;
+      margin: 30px auto 10px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .kpi-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+      border-bottom: 4px solid var(--primary-color);
+    }
+    .kpi-value { display: block; font-size: 2.5rem; font-weight: 800; color: var(--primary-color); }
+    .kpi-label { display: block; font-size: 0.9rem; text-transform: uppercase; color: #777; margin-top: 5px; }
 
-        @media (max-width: 900px) {
-            .container { grid-template-columns: 1fr; }
-        }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; }
+    }
 
-        .section-title {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
-            margin-bottom: 20px;
-            padding-bottom: 5px;
-        }
+    .section-title {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
 
-        .course-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: var(--card-shadow);
-            border-left: 6px solid var(--primary-color);
-        }
+    .course-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: var(--card-shadow);
+      border-left: 6px solid var(--primary-color);
+    }
 
-        .img-box {
-            margin: 20px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-        }
-        .img-box img { width: 100%; height: auto; display: block; }
-        .caption { font-size: 0.85rem; padding: 10px; background: #f9f9f9; color: #555; font-style: italic; }
+    .img-box {
+      margin: 20px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .img-box img { width: 100%; height: auto; display: block; }
+    .caption { font-size: 0.85rem; padding: 10px; background: #f9f9f9; color: #555; font-style: italic; }
 
-        /* Sidebar Tech Story */
-        .sidebar-section {
-            background: var(--secondary-color);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #eee;
-        }
+    /* Sidebar Tech Story */
+    .sidebar-section {
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #eee;
+    }
 
-        /* Gallery Grid */
-        .gallery-section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 15px;
-        }
-        .gallery-item {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .gallery-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    /* Make sidebar images more prominent (avoid “tiny” feel) */
+    .sidebar-section .img-box img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+    }
 
-        footer {
-            background: #222;
-            color: #ccc;
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
+    /* Gallery Grid */
+    .gallery-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Bigger gallery tiles */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 22px;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 520px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item img { height: 260px; }
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Amrita Vishwa Vidyapeetham</h1>
-    <h2>Center for Wireless Networks & Applications (WNA)</h2>
+  <h1>Amrita Vishwa Vidyapeetham</h1>
+  <h2>Center for Wireless Networks & Applications (WNA)</h2>
 </header>
 
 <div class="kpi-container">
-    <div class="kpi-card"><span class="kpi-value">20+</span><span class="kpi-label">Total Publications</span></div>
-    <div class="kpi-card"><span class="kpi-value">3+</span><span class="kpi-label">Total Patents</span></div>
-    <div class="kpi-card"><span class="kpi-value">₹498M</span><span class="kpi-label">Funding Amount</span></div>
+  <div class="kpi-card"><span class="kpi-value">20+</span><span class="kpi-label">Total Publications</span></div>
+  <div class="kpi-card"><span class="kpi-value">3+</span><span class="kpi-label">Total Patents</span></div>
+  <div class="kpi-card"><span class="kpi-value">₹498M</span><span class="kpi-label">Funding Amount</span></div>
 </div>
 
 <div class="container">
-    <main>
-        <h2 class="section-title">Education & Training Highlights</h2>
+  <main>
+    <h2 class="section-title">Education & Training Highlights</h2>
 
-        <div class="course-card">
-            <h3>Building Disaster Resilience Through Experiential Learning</h3>
-            <p>A four-day intensive program equipping participants with climate science knowledge and response mechanisms through hands-on training.</p>
-            <ul>
-                <li><strong>Train-the-Trainer:</strong> Focused on empowering 27 diverse participants to champion resilience in their home communities.</li>
-                <li><strong>Practical Modules:</strong> Included first-aid, CPR training by AIMS Kochi, and field visits to the Tsunami Memorial.</li>
-            </ul>
-        </div>
+    <div class="course-card">
+      <h3>Building Disaster Resilience Through Experiential Learning</h3>
+      <p>A four-day intensive program equipping participants with climate science knowledge and response mechanisms through hands-on training.</p>
+      <ul>
+        <li><strong>Train-the-Trainer:</strong> Focused on empowering 27 diverse participants to champion resilience in their home communities.</li>
+        <li><strong>Practical Modules:</strong> Included first-aid, CPR training by AIMS Kochi, and field visits to the Tsunami Memorial.</li>
+      </ul>
+    </div>
 
-        <div class="course-card">
-            <h3>Resilient Futures: Navigating Climate Risks</h3>
-            <p>An executive course for industry leaders focusing on practical tools for managing climate-related financial and operational risks.</p>
-            <ul>
-                <li><strong>Reporting Standards:</strong> Training on TCFD, ISSB, and BRSR frameworks.</li>
-                <li><strong>Technical Analysis:</strong> Use of IPCC AR6 emission scenarios for corporate risk assessments.</li>
-            </ul>
-        </div>
-    </main>
+    <div class="course-card">
+      <h3>Resilient Futures: Navigating Climate Risks</h3>
+      <p>An executive course for industry leaders focusing on practical tools for managing climate-related financial and operational risks.</p>
+      <ul>
+        <li><strong>Reporting Standards:</strong> Training on TCFD, ISSB, and BRSR frameworks.</li>
+        <li><strong>Technical Analysis:</strong> Use of IPCC AR6 emission scenarios for corporate risk assessments.</li>
+      </ul>
+    </div>
+  </main>
 
-    <aside>
-        <h2 class="section-title">Featured Technology</h2>
-        <div class="sidebar-section">
-            <h3>Amrita Kripa</h3>
-            <div class="img-box">
-                <img src="images/amritakripa.png" alt="Amrita Kripa Diagram">
-                <div class="caption">Dynamic Landslide Risk Management Framework.</div>
-            </div>
-            <p style="font-size: 0.9rem;">Pilot deployment in Kodagu, Karnataka, integrating real-time rainfall thresholds with village-level vulnerability mapping.</p>
-            <a href="YOUR_ARCGIS_LINK_HERE" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">View Live Dashboard &rarr;</a>
-        </div>
+  <aside>
+    <h2 class="section-title">Featured Technology</h2>
+    <div class="sidebar-section">
+      <h3>Amrita Kripa</h3>
+      <div class="img-box">
+        <img src="images/amritakripa.png" alt="Amrita Kripa Diagram">
+        <div class="caption">Dynamic Landslide Risk Management Framework.</div>
+      </div>
+      <p style="font-size: 0.9rem;">Pilot deployment in Kodagu, Karnataka, integrating real-time rainfall thresholds with village-level vulnerability mapping.</p>
+      <a href="YOUR_ARCGIS_LINK_HERE" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">View Live Dashboard &rarr;</a>
+    </div>
 
-        <h2 class="section-title">Global Recognition</h2>
-        <div class="sidebar-section">
-            <div class="img-box">
-                <img src="images/nhess.png" alt="NHESS Journal Editor">
-                <div class="caption">Dr. Maneesha V. Ramesh appointed as Editor of NHESS.</div>
-            </div>
-            <p style="font-size: 0.85rem;">Appointment to the European Geosciences Union (EGU) Q1 journal for Natural Hazards and Earth System Sciences.</p>
-        </div>
-    </aside>
+    <h2 class="section-title">Global Recognition</h2>
+    <div class="sidebar-section">
+      <div class="img-box">
+        <img src="images/nhess.png" alt="NHESS Journal Editor">
+        <div class="caption">Dr. Maneesha V. Ramesh appointed as Editor of NHESS.</div>
+      </div>
+      <p style="font-size: 0.85rem;">Appointment to the European Geosciences Union (EGU) Q1 journal for Natural Hazards and Earth System Sciences.</p>
+    </div>
+  </aside>
 </div>
 
 <div class="gallery-section">
-    <h2 class="section-title">Program Gallery</h2>
-    <div class="gallery-grid">
+  <h2 class="section-title">Program Gallery</h2>
+  <!-- FIXED: removed duplicate nested .gallery-grid -->
   <div class="gallery-grid">
     <div class="gallery-item"><img src="images/sampleone.png" alt="Gallery 1"></div>
     <div class="gallery-item"><img src="images/sampletwo.png" alt="Gallery 2"></div>
@@ -198,13 +221,13 @@
     <div class="gallery-item"><img src="images/sample7.png" alt="Gallery 6"></div>
     <div class="gallery-item"><img src="images/sample8.png" alt="Gallery 7"></div>
     <div class="gallery-item"><img src="images/sample9.png" alt="Gallery 8"></div>
-</div>
-    </div>
+  </div>
 </div>
 
 <footer>
-    <p>Amrita Center for Wireless Networks & Applications (WNA)<br>
-    <a href="http://www.amrita.edu" style="color:white">www.amrita.edu</a></p>
+  <p>Amrita Center for Wireless Networks & Applications (WNA)<br>
+    <a href="http://www.amrita.edu" style="color:white">www.amrita.edu</a>
+  </p>
 </footer>
 
 </body>
