@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amrita Multi-Hazard Research & Education | Demo</title>
+
   <style>
     :root {
-      --primary-color: #b71c1c; /* Amrita Maroon */
+      --primary-color: #b71c1c;
       --secondary-color: #f8f9fa;
       --text-color: #333;
-      --border-color: #eee;
       --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #fdfdfd;
       color: var(--text-color);
       line-height: 1.6;
@@ -29,15 +28,15 @@
       text-align: center;
     }
     header h1 { margin: 0; color: var(--primary-color); font-size: 1.8rem; }
-    header h2 { margin: 5px 0 0 0; font-size: 1.1rem; font-weight: 400; color: #666; }
+    header h2 { margin: 6px 0 0; font-size: 1.1rem; font-weight: 400; color: #666; }
 
-    /* KPI Dashboard */
+    /* KPI */
     .kpi-container {
       max-width: 1200px;
       margin: 30px auto 10px;
       padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
     }
     .kpi-card {
@@ -48,8 +47,8 @@
       box-shadow: var(--card-shadow);
       border-bottom: 4px solid var(--primary-color);
     }
-    .kpi-value { display: block; font-size: 2.5rem; font-weight: 800; color: var(--primary-color); }
-    .kpi-label { display: block; font-size: 0.9rem; text-transform: uppercase; color: #777; margin-top: 5px; }
+    .kpi-value { font-size: 2.4rem; font-weight: 800; color: var(--primary-color); }
+    .kpi-label { font-size: 0.85rem; text-transform: uppercase; color: #777; }
 
     .container {
       max-width: 1200px;
@@ -59,6 +58,7 @@
       grid-template-columns: 2fr 1fr;
       gap: 30px;
     }
+
     @media (max-width: 900px) {
       .container { grid-template-columns: 1fr; }
     }
@@ -80,17 +80,6 @@
       border-left: 6px solid var(--primary-color);
     }
 
-    .img-box {
-      margin: 20px 0;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      background: #fff;
-    }
-    .img-box img { width: 100%; height: auto; display: block; }
-    .caption { font-size: 0.85rem; padding: 10px; background: #f9f9f9; color: #555; font-style: italic; }
-
-    /* Sidebar Tech Story */
     .sidebar-section {
       background: var(--secondary-color);
       padding: 20px;
@@ -99,45 +88,54 @@
       border: 1px solid #eee;
     }
 
-    /* Make sidebar images more prominent (avoid “tiny” feel) */
-    .sidebar-section .img-box img {
+    .img-box {
+      margin: 18px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .img-box img {
       width: 100%;
       max-height: 420px;
       object-fit: contain;
+      display: block;
     }
 
-    /* Gallery Grid */
+    .caption {
+      font-size: 0.85rem;
+      padding: 10px;
+      background: #f9f9f9;
+      color: #555;
+      font-style: italic;
+    }
+
+    /* FULL-WIDTH GALLERY */
     .gallery-section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+      width: 100%;
+      margin: 60px auto;
+      padding: 0 5%;
     }
 
-    /* Bigger gallery tiles */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
     }
 
     .gallery-item {
       background: #fff;
-      border: 1px solid #eee;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     }
 
     .gallery-item img {
       width: 100%;
-      height: 360px;
+      height: 260px;
       object-fit: cover;
       display: block;
-    }
-
-    @media (max-width: 520px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item img { height: 260px; }
     }
 
     footer {
@@ -147,6 +145,8 @@
       text-align: center;
       margin-top: 50px;
     }
+
+    footer a { color: #fff; text-decoration: none; }
   </style>
 </head>
 
@@ -158,9 +158,9 @@
 </header>
 
 <div class="kpi-container">
-  <div class="kpi-card"><span class="kpi-value">20+</span><span class="kpi-label">Total Publications</span></div>
-  <div class="kpi-card"><span class="kpi-value">3+</span><span class="kpi-label">Total Patents</span></div>
-  <div class="kpi-card"><span class="kpi-value">₹498M</span><span class="kpi-label">Funding Amount</span></div>
+  <div class="kpi-card"><div class="kpi-value">20+</div><div class="kpi-label">Total Publications</div></div>
+  <div class="kpi-card"><div class="kpi-value">3+</div><div class="kpi-label">Total Patents</div></div>
+  <div class="kpi-card"><div class="kpi-value">₹498M</div><div class="kpi-label">Funding Amount</div></div>
 </div>
 
 <div class="container">
@@ -169,65 +169,64 @@
 
     <div class="course-card">
       <h3>Building Disaster Resilience Through Experiential Learning</h3>
-      <p>A four-day intensive program equipping participants with climate science knowledge and response mechanisms through hands-on training.</p>
-      <ul>
-        <li><strong>Train-the-Trainer:</strong> Focused on empowering 27 diverse participants to champion resilience in their home communities.</li>
-        <li><strong>Practical Modules:</strong> Included first-aid, CPR training by AIMS Kochi, and field visits to the Tsunami Memorial.</li>
-      </ul>
+      <p>A four-day intensive program equipping participants with climate science knowledge and response mechanisms.</p>
     </div>
 
     <div class="course-card">
       <h3>Resilient Futures: Navigating Climate Risks</h3>
-      <p>An executive course for industry leaders focusing on practical tools for managing climate-related financial and operational risks.</p>
-      <ul>
-        <li><strong>Reporting Standards:</strong> Training on TCFD, ISSB, and BRSR frameworks.</li>
-        <li><strong>Technical Analysis:</strong> Use of IPCC AR6 emission scenarios for corporate risk assessments.</li>
-      </ul>
+      <p>An executive program focused on climate risk governance and reporting standards.</p>
     </div>
   </main>
 
   <aside>
+
+    <!-- NHESS FIRST -->
+    <h2 class="section-title">Global Recognition</h2>
+    <div class="sidebar-section">
+      <div class="img-box">
+        <img src="images/nhess.png" alt="NHESS Editor">
+        <div class="caption">Dr. Maneesha V. Ramesh appointed Editor, NHESS (EGU Q1 Journal)</div>
+      </div>
+      <p style="font-size: 0.9rem;">
+        Appointment to the European Geosciences Union journal
+        <em>Natural Hazards and Earth System Sciences</em>.
+      </p>
+    </div>
+
+    <!-- AMRITA KRIPA SECOND -->
     <h2 class="section-title">Featured Technology</h2>
     <div class="sidebar-section">
       <h3>Amrita Kripa</h3>
       <div class="img-box">
-        <img src="images/amritakripa.png" alt="Amrita Kripa Diagram">
-        <div class="caption">Dynamic Landslide Risk Management Framework.</div>
+        <img src="images/amritakripa.png" alt="Amrita Kripa">
+        <div class="caption">Dynamic Landslide Risk Management Framework</div>
       </div>
-      <p style="font-size: 0.9rem;">Pilot deployment in Kodagu, Karnataka, integrating real-time rainfall thresholds with village-level vulnerability mapping.</p>
-      <a href="YOUR_ARCGIS_LINK_HERE" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">View Live Dashboard &rarr;</a>
+      <p style="font-size: 0.9rem;">
+        Pilot deployment in Kodagu integrating rainfall thresholds
+        and village-level vulnerability mapping.
+      </p>
     </div>
 
-    <h2 class="section-title">Global Recognition</h2>
-    <div class="sidebar-section">
-      <div class="img-box">
-        <img src="images/nhess.png" alt="NHESS Journal Editor">
-        <div class="caption">Dr. Maneesha V. Ramesh appointed as Editor of NHESS.</div>
-      </div>
-      <p style="font-size: 0.85rem;">Appointment to the European Geosciences Union (EGU) Q1 journal for Natural Hazards and Earth System Sciences.</p>
-    </div>
   </aside>
 </div>
 
 <div class="gallery-section">
   <h2 class="section-title">Program Gallery</h2>
-  <!-- FIXED: removed duplicate nested .gallery-grid -->
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="images/sampleone.png" alt="Gallery 1"></div>
-    <div class="gallery-item"><img src="images/sampletwo.png" alt="Gallery 2"></div>
-    <div class="gallery-item"><img src="images/sample3.png" alt="Gallery 3"></div>
-    <div class="gallery-item"><img src="images/sample5.png" alt="Gallery 4"></div>
-    <div class="gallery-item"><img src="images/sample6.png" alt="Gallery 5"></div>
-    <div class="gallery-item"><img src="images/sample7.png" alt="Gallery 6"></div>
-    <div class="gallery-item"><img src="images/sample8.png" alt="Gallery 7"></div>
-    <div class="gallery-item"><img src="images/sample9.png" alt="Gallery 8"></div>
+    <div class="gallery-item"><img src="images/sampleone.png"></div>
+    <div class="gallery-item"><img src="images/sampletwo.png"></div>
+    <div class="gallery-item"><img src="images/sample3.png"></div>
+    <div class="gallery-item"><img src="images/sample5.png"></div>
+    <div class="gallery-item"><img src="images/sample6.png"></div>
+    <div class="gallery-item"><img src="images/sample7.png"></div>
+    <div class="gallery-item"><img src="images/sample8.png"></div>
+    <div class="gallery-item"><img src="images/sample9.png"></div>
   </div>
 </div>
 
 <footer>
   <p>Amrita Center for Wireless Networks & Applications (WNA)<br>
-    <a href="http://www.amrita.edu" style="color:white">www.amrita.edu</a>
-  </p>
+  <a href="https://www.amrita.edu">www.amrita.edu</a></p>
 </footer>
 
 </body>
